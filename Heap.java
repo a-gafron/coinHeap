@@ -1,8 +1,8 @@
 public class Heap {
     private Coin[] heapArray;
 
-    public Heap(int length){
-        this.heapArray = new Coin[length];
+    public Heap(int lengthForArray){
+        this.heapArray = new Coin[lengthForArray];
     }
 
     public static int weightOfArray (Coin[] arrayToWeigh){
@@ -13,4 +13,10 @@ public class Heap {
         }
         return weight;
     }
+
+    public static int weighTwoThirds (Coin[] firstThird_, Coin[] secondThird_){
+        int resultOfWeighing = weightOfArray(firstThird_)-weightOfArray(secondThird_);
+        return resultOfWeighing;
+    }
+
 }

@@ -26,4 +26,9 @@ public class Utility {
         //here is an exception required
         return rest;
     }
+
+    public int cutIntoThirds (int rest_) {
+        currentAmountOfCoins = (currentAmountOfCoins- rest_)*1/3 + rest_;
+        return currentAmountOfCoins;
+    }
 }

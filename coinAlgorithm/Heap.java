@@ -1,3 +1,5 @@
+package coinAlgorithm;
+
 public class Heap {
     private Coin[] heapArray;
 

@@ -1,3 +1,5 @@
+package coinAlgorithm;
+
 public class Utility {
 
     public static int currentAmountOfCoins = 19863; //create a conversation, where per scanner the amount could get set

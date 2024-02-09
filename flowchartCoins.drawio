@@ -85,7 +85,7 @@
         <mxCell id="h35wLK1LhefXW1c5MuRA-22" value="all three with the length of the value of slice1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="315.32" y="870" width="189.36" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="h35wLK1LhefXW1c5MuRA-24" value="creating 19681 Coins &lt;br&gt;attributs: weight = 1; &lt;br&gt;nr ascending&lt;span style=&quot;background-color: initial;&quot;&gt;;&lt;/span&gt;&lt;br&gt;a Coin at random with weight = 2;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="h35wLK1LhefXW1c5MuRA-24" value="creating 19681 Coins &lt;br&gt;attributs: weight = 1; &lt;br&gt;nr ascending&lt;span style=&quot;background-color: initial;&quot;&gt;;&lt;/span&gt;&lt;br&gt;a coinAlgorithm.Coin at random with weight = 2;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="310.31" y="-190" width="199.99" height="70" as="geometry" />
         </mxCell>
         <mxCell id="h35wLK1LhefXW1c5MuRA-25" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="h35wLK1LhefXW1c5MuRA-24" target="h35wLK1LhefXW1c5MuRA-18">
@@ -223,7 +223,7 @@
         <mxCell id="h35wLK1LhefXW1c5MuRA-55" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-weight: bold; font-size: 14px;&quot;&gt;while&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;actualAmount &amp;gt; 1&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="325.14" y="40" width="169.69" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="h35wLK1LhefXW1c5MuRA-57" value="nr of last Coin &lt;br&gt;and &lt;br&gt;the count of&amp;nbsp;weighings" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="h35wLK1LhefXW1c5MuRA-57" value="nr of last coinAlgorithm.Coin &lt;br&gt;and &lt;br&gt;the count of&amp;nbsp;weighings" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="335.31" y="1591" width="150.63" height="60" as="geometry" />
         </mxCell>
         <mxCell id="h35wLK1LhefXW1c5MuRA-58" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="h35wLK1LhefXW1c5MuRA-49" target="h35wLK1LhefXW1c5MuRA-60">

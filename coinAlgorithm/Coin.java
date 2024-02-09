@@ -1,3 +1,5 @@
+package coinAlgorithm;
+
 public class Coin {
     private int nrOfTheCoin = 0;
     private int weightOfTheCoin = 0;

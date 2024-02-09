@@ -2,7 +2,7 @@ package coinAlgorithm;
 
 public class Utility {
 
-    public static int currentAmountOfCoins = 19863; //create a conversation, where per scanner the amount could get set
+    public static int currentAmountOfCoins = 19683; //create a conversation, where per scanner the amount could get set
     public static int minAmountOfCoins = 0;
     public static int random_int = (int)Math.floor(Math.random() * (currentAmountOfCoins - minAmountOfCoins + 1) + minAmountOfCoins);
     public static int counterOfWeighing = 0;
@@ -54,13 +54,25 @@ public class Utility {
         }
     }
 
-    public static void fillingTheThirds (Heap third_, int lengthOfThird){
-    //    third_ = new Heap(lengthOfThird);
+    public static void fillingTheFirstThird (Heap third_, int lengthOfThird){
         third_.heapArray = new Coin[lengthOfThird];
         for (int i = 0; i < endFirstThird; i++){
             third_.heapArray[i] = aFreshHeap.heapArray[i];
         }
     }
+    public static void fillingTheSecondThird (Heap third_, int lengthOfThird){
+        third_.heapArray = new Coin[lengthOfThird];
+        for (int i = 0; i < endFirstThird; i++){
+            third_.heapArray[i] = aFreshHeap.heapArray[i + endFirstThird];
+        }
+    }
+    public static void fillingTheThirdThird (Heap third_, int lengthOfThird){
+        third_.heapArray = new Coin[lengthOfThird];
+        for (int i = 0; i < endFirstThird; i++){
+            third_.heapArray[i] = aFreshHeap.heapArray[i + endSecondThird];
+        }
+    }
+
 
     public static void solution (){
         Utility.initialHeapWithCoins(aFreshHeap);
@@ -70,9 +82,9 @@ public class Utility {
             endFirstThird = sliceTheFirstThird(subtractRest, currentAmountOfCoins);
             endSecondThird = endFirstThird * 2;
 
-            fillingTheThirds(firstThird, endFirstThird);
-            fillingTheThirds(secondThird, (endSecondThird - endFirstThird));
-            fillingTheThirds(thirdThird, aFreshHeap.heapArray.length - endSecondThird);
+            fillingTheFirstThird(firstThird, endFirstThird);
+            fillingTheSecondThird(secondThird, (endSecondThird - endFirstThird));
+            fillingTheThirdThird(thirdThird, (aFreshHeap.heapArray.length - endSecondThird));
 
             if (Heap.weighTwoThirds(firstThird.heapArray, secondThird.heapArray) == 0) {
                 aFreshHeap.heapArray = thirdThird.heapArray;

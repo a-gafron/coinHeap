@@ -16,9 +16,11 @@ public class Coin {
     public void setNrOfTheCoin(int nrOfTheCoin){
         this.nrOfTheCoin = nrOfTheCoin;
     }
+
     public int getWeightOfTheCoin(){
         return weightOfTheCoin;
     }
+
     public void setWeightOfTheCoin(int weightOfTheCoin){
         this.weightOfTheCoin = weightOfTheCoin;
     }

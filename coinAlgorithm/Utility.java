@@ -9,9 +9,8 @@ public class Utility {
     public static int subtractRest = 0;
     public static int endFirstThird = 0;
     public static int endSecondThird = 0;
-
     public static int actualCountOfCoins;
-    public static Heap aFreshHeap;
+    public static Heap aFreshHeap = new Heap(currentAmountOfCoins);
     public static Heap firstThird;
     public static Heap secondThird;
     public static Heap thirdThird;
@@ -33,6 +32,7 @@ public class Utility {
         currentAmountOfCoins = (currentAmountOfCoins - rest_)*1/3 + rest_;
         return currentAmountOfCoins;
     }
+
     public static int sliceTheFirstThird (int rest_){
         currentAmountOfCoins = (currentAmountOfCoins - rest_)*1/3;
         return currentAmountOfCoins;
@@ -42,4 +42,16 @@ public class Utility {
         currentAmountOfCoins = (currentAmountOfCoins - rest_)*2/3;
         return currentAmountOfCoins;
     }
+
+    public static void initialHeapWithCoins (Heap toGetFilled){
+        for (int i = 0; i < currentAmountOfCoins; i++){
+            if (i == random_int){
+                toGetFilled.heapArray[i] = new Coin(i, 1);
+            }
+            else {
+                toGetFilled.heapArray[i] = new Coin(i, 2);
+            }
+        }
+    }
+
 }

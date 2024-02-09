@@ -1,7 +1,7 @@
 package coinAlgorithm;
 
 public class Heap {
-    private Coin[] heapArray;
+    public Coin[] heapArray;
 
     public Heap(int lengthForArray){
         this.heapArray = new Coin[lengthForArray];

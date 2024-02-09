@@ -27,8 +27,17 @@ public class Utility {
         return rest;
     }
 
-    public int cutIntoThirds (int rest_) {
-        currentAmountOfCoins = (currentAmountOfCoins- rest_)*1/3 + rest_;
+    public static int cutIntoThirds (int rest_) {
+        currentAmountOfCoins = (currentAmountOfCoins - rest_)*1/3 + rest_;
+        return currentAmountOfCoins;
+    }
+    public static int sliceTheFirstThird (int rest_){
+        currentAmountOfCoins = (currentAmountOfCoins - rest_)*1/3;
+        return currentAmountOfCoins;
+    }
+
+    public static int sliceTheSecondThird (int rest_){
+        currentAmountOfCoins = (currentAmountOfCoins - rest_)*2/3;
         return currentAmountOfCoins;
     }
 }

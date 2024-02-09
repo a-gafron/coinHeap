@@ -80,7 +80,9 @@ public class Utility {
             } else if (Heap.weighTwoThirds(firstThird.heapArray, secondThird.heapArray) == -1) {
                 aFreshHeap.heapArray = firstThird.heapArray;
             }
+            counterOfWeighing += 1;
             System.out.println(aFreshHeap.heapArray.length);
+            System.out.println(counterOfWeighing);
 
         }
         return aFreshHeap.heapArray.length;

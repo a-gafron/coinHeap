@@ -69,8 +69,21 @@ public class Utility {
             endFirstThird = sliceTheFirstThird(subtractRest, currentAmountOfCoins);
             endSecondThird = endFirstThird * 2;
 
+            fillingTheThirds(firstThird, endFirstThird);
+            fillingTheThirds(secondThird, (endSecondThird - endFirstThird));
+            fillingTheThirds(thirdThird, aFreshHeap.heapArray.length - endSecondThird);
+
+            if (Heap.weighTwoThirds(firstThird.heapArray, secondThird.heapArray) == 0) {
+                aFreshHeap.heapArray = thirdThird.heapArray;
+            } else if (Heap.weighTwoThirds(firstThird.heapArray, secondThird.heapArray) == 1) {
+                aFreshHeap.heapArray = secondThird.heapArray;
+            } else if (Heap.weighTwoThirds(firstThird.heapArray, secondThird.heapArray) == -1) {
+                aFreshHeap.heapArray = firstThird.heapArray;
+            }
+            System.out.println(aFreshHeap.heapArray.length);
 
         }
+        return aFreshHeap.heapArray.length;
     }
 
 }

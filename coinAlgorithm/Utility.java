@@ -11,9 +11,9 @@ public class Utility {
     public static int endSecondThird = 0;
     public static int actualCountOfCoins;
     public static Heap aFreshHeap = new Heap(currentAmountOfCoins);
-    public static Heap firstThird;
-    public static Heap secondThird;
-    public static Heap thirdThird;
+    public static Heap firstThird = new Heap();
+    public static Heap secondThird = new Heap();
+    public static Heap thirdThird = new Heap();
 
     public static int makeTheAmountDivisible (int currentAmountOfCoins_){
         int rest = 0;
@@ -54,10 +54,11 @@ public class Utility {
         }
     }
 
-    public static void fillingTheThirds (Heap third, int lengthOfThird){
-        third = new Heap(lengthOfThird);
+    public static void fillingTheThirds (Heap third_, int lengthOfThird){
+    //    third_ = new Heap(lengthOfThird);
+        third_.heapArray = new Coin[lengthOfThird];
         for (int i = 0; i < endFirstThird; i++){
-            third.heapArray[i] = aFreshHeap.heapArray[i];
+            third_.heapArray[i] = aFreshHeap.heapArray[i];
         }
     }
 

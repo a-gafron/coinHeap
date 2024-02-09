@@ -3,6 +3,7 @@ package coinAlgorithm;
 public class Heap {
     public Coin[] heapArray;
 
+    public Heap(){};
     public Heap(int lengthForArray){
         this.heapArray = new Coin[lengthForArray];
     }

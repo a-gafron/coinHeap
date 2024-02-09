@@ -61,7 +61,7 @@ public class Utility {
         }
     }
 
-    public static int solution (){
+    public static void solution (){
         Utility.initialHeapWithCoins(aFreshHeap);
 
         while (aFreshHeap.heapArray.length > 1) {
@@ -85,7 +85,8 @@ public class Utility {
             System.out.println(counterOfWeighing);
 
         }
-        return aFreshHeap.heapArray.length;
+        System.out.println(aFreshHeap.heapArray.length);
+        System.out.println(counterOfWeighing);
     }
 
 }

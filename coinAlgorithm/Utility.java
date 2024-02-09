@@ -15,32 +15,32 @@ public class Utility {
     public static Heap secondThird;
     public static Heap thirdThird;
 
-    public static int makeTheAmountDivisible (){
+    public static int makeTheAmountDivisible (int currentAmountOfCoins_){
         int rest = 0;
-        if (currentAmountOfCoins % 3 == 0) {
+        if (currentAmountOfCoins_ % 3 == 0) {
             rest = 0;
-        } else if (currentAmountOfCoins % 3 == 1) {
+        } else if (currentAmountOfCoins_ % 3 == 1) {
             rest = 1;
-        } else if (currentAmountOfCoins % 3 == 2) {
+        } else if (currentAmountOfCoins_ % 3 == 2) {
             rest = 2;
         }
         //here is an exception required
         return rest;
     }
 
-    public static int cutIntoThirds (int rest_) {
-        currentAmountOfCoins = (currentAmountOfCoins - rest_)*1/3 + rest_;
-        return currentAmountOfCoins;
+    public static int cutIntoThirds (int rest_, int currentAmountOfCoins_) {
+        currentAmountOfCoins_ = (currentAmountOfCoins_ - rest_)*1/3 + rest_;
+        return currentAmountOfCoins_;
     }
 
-    public static int sliceTheFirstThird (int rest_){
-        currentAmountOfCoins = (currentAmountOfCoins - rest_)*1/3;
-        return currentAmountOfCoins;
+    public static int sliceTheFirstThird (int rest_, int currentAmountOfCoins_ ){
+        currentAmountOfCoins_ = (currentAmountOfCoins_ - rest_)*1/3;
+        return currentAmountOfCoins_;
     }
 
-    public static int sliceTheSecondThird (int rest_){
-        currentAmountOfCoins = (currentAmountOfCoins - rest_)*2/3;
-        return currentAmountOfCoins;
+    public static int sliceTheSecondThird (int rest_,int currentAmountOfCoins_){
+        currentAmountOfCoins_ = (currentAmountOfCoins_ - rest_)*2/3;
+        return currentAmountOfCoins_;
     }
 
     public static void initialHeapWithCoins (Heap toGetFilled){
@@ -51,6 +51,25 @@ public class Utility {
             else {
                 toGetFilled.heapArray[i] = new Coin(i, 2);
             }
+        }
+    }
+
+    public static void fillingTheThirds (Heap third, int lengthOfThird){
+        third = new Heap(lengthOfThird);
+        for (int i = 0; i < endFirstThird; i++){
+            third.heapArray[i] = aFreshHeap.heapArray[i];
+        }
+    }
+
+    public static int solution (){
+        Utility.initialHeapWithCoins(aFreshHeap);
+
+        while (aFreshHeap.heapArray.length > 1) {
+            subtractRest = makeTheAmountDivisible(currentAmountOfCoins);
+            endFirstThird = sliceTheFirstThird(subtractRest, currentAmountOfCoins);
+            endSecondThird = endFirstThird * 2;
+
+
         }
     }
 

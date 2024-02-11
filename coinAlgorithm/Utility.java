@@ -74,10 +74,16 @@ public class Utility {
     }
 
 
+
     public static void solution (){
+
         Utility.initialHeapWithCoins(aFreshHeap);
 
+
         while (aFreshHeap.heapArray.length > 1) {
+
+            currentAmountOfCoins = aFreshHeap.heapArray.length;
+
             subtractRest = makeTheAmountDivisible(currentAmountOfCoins);
             endFirstThird = sliceTheFirstThird(subtractRest, currentAmountOfCoins);
             endSecondThird = endFirstThird * 2;
@@ -94,12 +100,13 @@ public class Utility {
                 aFreshHeap.heapArray = firstThird.heapArray;
             }
             counterOfWeighing += 1;
-            System.out.println(aFreshHeap.heapArray.length);
-            System.out.println(counterOfWeighing);
+
+            System.out.println("Remaining coins: " + aFreshHeap.heapArray.length);
 
         }
-        System.out.println(aFreshHeap.heapArray.length);
-        System.out.println(counterOfWeighing);
-    }
+        System.out.println("Number of the last coin: " + aFreshHeap.heapArray[0].getNrOfTheCoin() + "\n" +
+                            "Weight of the last coin: " + aFreshHeap.heapArray[0].getWeightOfTheCoin() + "\n" +
+                                "Overall count of weighing steps: " + counterOfWeighing);
 
+    }
 }
